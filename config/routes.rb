@@ -1,7 +1,22 @@
 NewProject::Application.routes.draw do
+
+  # COMMENT
+  # Staticke cesty se pouzivaji na staticke stranky. Smazat
   get "welcome/registration"
   get "welcome/index"
+  
+  # Toto ti urcite fungovat nebude. To je tak stary syntax pro Rails 2.
+  # Az budes mit RegistrationsController, tak pouzijes
+  #
+  # resources :registrations
+  #
+  # rake routes ti vzdy ukaze aktualni cesty v routeru
+  #
+  # projdi di tutorial http://guides.rubyonrails.org/routing.html
+  #
   map.registration 'registration', :controller => 'welcome', action => 'registration'
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
