@@ -1,6 +1,7 @@
 NewProject::Application.routes.draw do
   get "welcome/registration"
   get "welcome/index"
+  map.registration 'registration', :controller => 'welcome', action => 'registration'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
